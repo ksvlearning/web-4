@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="topmenu">
+    <nav  class="nav">
+        <div class="navlogo">
+            <p>LOGO  .</p>
+        </div>
+        <div class="navmenu"  id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link ">Blog</a></li>
+                <li><a href="#" class="link ">Services</a></li>
+                <li><a href="#" class="link ">About</a></li>
+
+            </ul>
+        </div>
+        <div class="navbutton">
+            <button class="btn logbtn" id="loginbtn" onclick="login()">SignIn</button>
+            <button class="btn" id="registerbtn" onclick="register()">SignUp</button>
+        </div>
+        <div class="navmenubtn">
+           <i class="fa fa-bars" onclick="myMenuFunction()"></i>         
+        </div>
+    </nav>   
+
+    <!-- form details-->
+    <div class="formbox">
+          <!-- login details -->
+          <div class="login-container" id="login">
+            <div class="top"><span>Have a account?<a href="#" onclick="register()">Signup</a></span>
+                <header>Login</header>
+            </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="user name orEmail">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="password">
+                    <i class="fa fa-lock"></i>
+                </div>
+                <div class="input-box">
+                    <input type="Submit" class="Submit" Value="Sign In">
+                  
+                </div>
+                <div class="twocolumn">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Forget password</a></label>
+                    </div>
+                </div>              
+            </div>
+    <!-- </div> -->
+        <!-- register details -->
+        <div class="register-container" id="register">
+            <div class="top"><span>Have a account?<a href="#" onclick="login()">Login</a></span>
+                <header>SignUp</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class="fa fa-user"></i>
+                </div>
+            </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="password">
+                    <i class="fa fa-lock"></i>
+                </div>
+                <div class="input-box">
+                    <input type="Submit" class="Submit" Value="Register">
+                  
+                </div>
+                <div class="twocolumn">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check">Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Terms & conditions</a></label>
+                    </div>
+                </div>              
+            </div>
+    </div>
+</div>
+<script>
+    function myMenuFunction(){
+    var i=document.getElementById("navMenu");
+
+    if(i.className ==="navmenu"){
+        i.className +=" responsive";
+    }else{
+        i.className = "navmenu"
+    }
+}
+    
+</script>
+<script>
+    var a=document.getElementById("loginbtn");
+    var b=document.getElementById("registerbtn");
+    var x=document.getElementById("login");
+    var y=document.getElementById("register");
+
+    function login(){
+        x.style.left="4px";
+        y.style.right="-520px";
+        a.className +=" white-btn";
+        b.className ="btn";
+        x.style.opacity=1;
+        y.style.opacity=0;
+    }
+    function register(){
+        x.style.left="-510px";
+        y.style.right="5px";
+        a.className ="btn";
+        b.className +=" white-btn";
+        x.style.opacity=0;
+        y.style.opacity=1;
+    }
+   
+
+
+</script>
+</body>
+</html>
